@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>My Portfolio</title>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to My Portfolio</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>山形大学院では、数値シミュレーションを研究。
+        在学時にはAIに関心があり、E資格を取得。
+        2024年に卒業後、上京して広告会社に従事。
+      現在はプランナーとして、広告の効果検証や予算策定などのマーケティング領域に携わる。</p>
+    </section>
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li onclick="toggleDetail('htmlDetail')">HTML
+          <p id="htmlDetail" class="detail" style="display: none;">HTMLはウェブページの骨組みを構築する言語です。</p>
+        </li>
+        <li onclick="toggleDetail('cssDetail')">CSS
+          <p id="cssDetail" class="detail" style="display: none;">CSSはウェブページのスタイルを定義する言語です。</p>
+        </li>
+        <li onclick="toggleDetail('jsDetail')">JavaScript
+          <p id="jsDetail" class="detail" style="display: none;">JavaScriptはウェブページに動きを加えるための言語です。</p>
+        </li>
+      </ul>
+    </section>
+
+    <button id="backToTop" onclick="scrollToTop()">トップに戻る</button>
+    <button onclick="toggleTheme()">テーマ切り替え</button>
+  
+  </main>
+
+  <footer>
+    <p>Contact: kanemasa1541km@gmail.com</p>
+  </footer>
+
+</body>
+<script src="script.js"></script>
+</html>

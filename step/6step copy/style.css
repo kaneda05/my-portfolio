@@ -1,0 +1,80 @@
+/* 基本スタイル */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* ヘッダーのスタイル */
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  header nav a {
+    color: #ffd700; /* ゴールドカラー */
+    text-decoration: underline;
+  }
+  
+  /* メインのセクションスタイル */
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  
+  section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    color: #333;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+  }
+  
+  /* フッターのスタイル */
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: auto;
+    width: 100%;
+  }
+  
+  #backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  body.dark-theme {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  body.dark-theme header,
+  body.dark-theme footer {
+    background-color: #111;
+  }
+  
+  body.dark-theme #backToTop {
+    background-color: #fff;
+    color: #333;
+  }
+  
