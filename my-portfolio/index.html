@@ -18,12 +18,20 @@
   </header>
 
   <main>
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="experience-item">
+        <h3>職務名: プランナー</h3>
+        <p>会社名: ADKマーケティングソリューションズ</p>
+        <p>期間: 2024年4月 - 現在</p>
+        <p>業務内容: 広告の効果検証や予算策定などのマーケティング業務に携わる</p>
+      </div>
+      <!-- 他の経歴も同様に追加 -->
+    </section>
+    
     <section id="about">
       <h2>About Me</h2>
-      <p>山形大学院では、数値シミュレーションを研究。
-        在学時にはAIに関心があり、E資格を取得。
-        2024年に卒業後、上京して広告会社に従事。
-      現在はプランナーとして、広告の効果検証や予算策定などのマーケティング領域に携わる。</p>
+      <p>山形大学院では、数値シミュレーションを研究。</p>
     </section>
     
     <section id="skills">
@@ -38,8 +46,23 @@
         <li onclick="toggleDetail('jsDetail')">JavaScript
           <p id="jsDetail" class="detail" style="display: none;">JavaScriptはウェブページに動きを加えるための言語です。</p>
         </li>
+        <li onclick="toggleDetail('dsDetail')">データ分析
+          <p id="dsDetail" class="detail" style="display: none;">広告の効果検証など時系列分析やアンケートデータの分析を実務で実施</p>
+        </li>
       </ul>
     </section>
+
+    <section id="portfolio">
+      <h2>My Projects</h2>
+      <article>
+        <h3>プロジェクト名</h3>
+        <p>説明文...</p>
+        <p>使用技術: HTML, CSS, JavaScript</p>
+        <a href="https://github.com/username/project-link" target="_blank">GitHub</a>
+      </article>
+      <!-- 他のプロジェクトも同様に追加 -->
+    </section>
+    
 
     <button id="backToTop" onclick="scrollToTop()">トップに戻る</button>
     <button onclick="toggleTheme()">テーマ切り替え</button>

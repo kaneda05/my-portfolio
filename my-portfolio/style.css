@@ -119,3 +119,14 @@ button {
   border-radius: 5px;
   cursor: pointer;
 }
+
+/*職歴に関して*/
+#experience {
+  margin-top: 20px;
+}
+
+.experience-item {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc; /* セクションの区切り */
+  padding-bottom: 10px; /* セクションの余白 */
+}
