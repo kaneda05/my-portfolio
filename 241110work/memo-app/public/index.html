@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>メモアプリ</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    .memo { margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+  <h1>メモアプリ</h1>
+  
+  <form id="memoForm">
+    <input type="text" id="memoInput" placeholder="メモを入力してください" required>
+    <button type="submit">追加</button>
+  </form>
+  
+  <h2>メモ一覧</h2>
+  <div id="memoList"></div>
+
+  <script>
+    // メモの一覧を取得して表示
+    async function fetchMemos() {
+      const response = await fetch('/api/memos');
+      const memos = await response.json();
+      const memoList = document.getElementById('memoList');
+      memoList.innerHTML = ''; // リストをクリア
+      memos.forEach(memo => {
+        const div = document.createElement('div');
+        div.classList.add('memo');
+        div.textContent = memo.text;
+        memoList.appendChild(div);
+      });
+    }
+
+    // メモの送信処理
+    document.getElementById('memoForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const memoInput = document.getElementById('memoInput');
+      const text = memoInput.value.trim();
+      if (text) {
+        // APIに新しいメモを送信
+        await fetch('/api/memos', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ text })
+        });
+        memoInput.value = ''; // 入力欄をクリア
+        fetchMemos(); // メモ一覧を更新
+      }
+    });
+
+    // 初期表示
+    fetchMemos();
+  </script>
+</body>
+</html>
